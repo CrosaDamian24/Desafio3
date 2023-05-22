@@ -4,10 +4,6 @@ import { ProductManager } from './ProductManager.js'
 const manager = new ProductManager('../products.json');
 
   
-      const traerProduct = async (prueba) =>{
-            const products =  await manager.getProducts()
-            return products
-        };
 
 const app = express()
 
