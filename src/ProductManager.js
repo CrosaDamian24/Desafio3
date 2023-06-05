@@ -17,7 +17,8 @@ export class ProductManager {
   getProductById = async (id) => {
     const products = await this.getProducts();
     const product = products.find((item) => item.id === id);
-    return !product ? {error : "Not Found"} : product;
+    return !product ? 'ERRORR': product;
+    // return !product ? {error : "Not Found"} : product;
   };
 
     //Busqueda por KEY

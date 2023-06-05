@@ -9,7 +9,7 @@
 		"stock": 50
 	},
 	{
-		"id": 2,
+		"id": 5,
 		"title": "Postre Toddy",
 		"description": "Galletitas toddy, dulce y crema",
 		"price": 950,
@@ -18,7 +18,7 @@
 		"stock": 8
 	},
 	{
-		"id": 3,
+		"id": 6,
 		"title": "Postre Chocolinas",
 		"description": "Galletitas chocolinas, dulce y crema",
 		"price": 950,

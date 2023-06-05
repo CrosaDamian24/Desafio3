@@ -13,7 +13,8 @@ app.get('/products', async (req,res)=>{
     let limite = req.query.limite
     const productLimitados = await manager.getProducts()
 
-    const prueba = productLimitados.filter(prodcuto => prodcuto.id <= Number(limite))
+    // const prueba = productLimitados.filter(prodcuto => prodcuto.id <= Number(limite))
+     const prueba = productLimitados.slice(0, Number(limite))
   
     if(!limite) res.send(await manager.getProducts())
     else{
@@ -25,7 +26,13 @@ app.get('/products', async (req,res)=>{
 app.get('/products/:id', async (req,res)=>{
     const id = req.params.id
 
-    res.send(await manager.getProductById(Number(id)))
+    
+
+   
+    if (await manager.getProductById(Number(id))==='ERRORR') res.status(400).send({error : "Not Found"})
+    else{
+        res.send(await manager.getProductById(Number(id)))
+    }
 })
 
 
