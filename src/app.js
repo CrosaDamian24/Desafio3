@@ -29,7 +29,7 @@ app.get('/products/:id', async (req,res)=>{
     
 
    
-    if (await manager.getProductById(Number(id))==='ERRORR') res.status(400).send({error : "Not Found"})
+    if (await manager.getProductById(Number(id))==='ERROR') res.status(400).send({error : "Not Found"})
     else{
         res.send(await manager.getProductById(Number(id)))
     }
